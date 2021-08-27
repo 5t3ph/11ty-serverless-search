@@ -1,6 +1,6 @@
 # 11ty Serverless Search
 
-An example of using 11ty Serverless to create site search. External results from [Stephanie Eckles dev.to profile](https://dev.to/5t3ph) are fetched as data, and then passed through an 11ty filter to search the content and return search results.
+An example of using [11ty Serverless](https://www.11ty.dev/docs/plugins/serverless/) to create site search. External results from [Stephanie Eckles dev.to profile](https://dev.to/5t3ph) are fetched as data, and then passed through an 11ty filter to search the content and return search results.
 
 **To use, select "Use this template"**
 
