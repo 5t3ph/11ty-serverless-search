@@ -1,6 +1,10 @@
 # 11ty Serverless Search
 
-_Build in progress_
+An example of using 11ty Serverless to create site search. External results from [Stephanie Eckles dev.to profile](https://dev.to/5t3ph) are fetched as data, and then passed through an 11ty filter to search the content and return search results.
+
+**To use, select "Use this template"**
+
+> TODO: Add example of using local page data
 
 ## Development Scripts
 

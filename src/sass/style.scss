@@ -1,14 +1,73 @@
+:root {
+  --color: hsl(260, 80%, 45%);
+  accent-color: var(--color);
+}
+
 body {
   font-family: sans-serif;
   background-color: #f9f9f9;
+  width: min(60ch, 100vw - 2rem);
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
 }
 
+form,
+h2 {
+  margin-top: max(8vh, 4rem);
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+* {
+  --outline-offset: 2px;
+
+  &:focus {
+    outline: 2px dashed currentColor;
+    outline-offset: var(--outline-offset);
+  }
+}
+
+input {
+  font-size: 1.15rem;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+button {
+  --outline-offset: -4px;
+
+  padding: 0.25em 0.75em;
+  border: 2px solid transparent;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25em;
+  background-color: var(--color);
+  color: #fff;
+  min-width: 10ch;
+  text-align: center;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
 
 .posts {
   display: grid;
   gap: 2rem;
 
   a {
-    color: black;
+    color: var(--color);
   }
 }

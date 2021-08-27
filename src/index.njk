@@ -1,9 +1,15 @@
 ---
 layout: base.njk
-title: Hello World
+title: 11ty Serverless Search
 ---
 
+<p>An example of using 11ty Serverless to create site search. External results from <a href="https://dev.to/5t3ph">Stephanie Eckles dev.to profile</a> are fetched as data, and then passed through an 11ty filter to search the content and return search results.</p>
 
+<p><a href="https://github.com/5t3ph/11ty-serverless-search">Use this template</a></p>
+
+{% include "searchform.njk" %}
+
+<h2>All Posts</h2>
 
 <ul class="posts">
 {% for post in posts %}

@@ -1,12 +1,18 @@
 ---
-title: "Search"
 layout: base
 permalink:
   serverless: /search/
+eleventyComputed:
+  title: "Search {% if eleventy.serverless.query.search %}Results{% else %}Posts{% endif %}"
 ---
 
 {% set searchTerm = eleventy.serverless.query.search %}
 
+
+
+{% include "searchform.njk" %}
+
+{% if searchTerm %}
 <h2>Search for: {{ searchTerm }}</h2>
 <p>{{ posts | results(searchTerm) | length }} results</p>
 
@@ -15,3 +21,4 @@ permalink:
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+{% endif %}
