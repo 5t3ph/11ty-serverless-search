@@ -1,6 +1,6 @@
 {
-  "name": "11ty-sass-skeleton",
-  "version": "1.2.0",
+  "name": "11ty-serverless-search",
+  "version": "0.1.0",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -14,19 +14,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
+    "url": "git+https://github.com/5t3ph/11ty-serverless-search.git"
   },
   "author": "5t3ph",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.3.3",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.0.7",
+    "cssnano": "^5.0.8",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.37.5"
+    "sass": "^1.38.1"
   },
   "browserslist": [
     "last 2 versions"
