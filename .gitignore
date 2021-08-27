@@ -4,6 +4,8 @@ node_modules
 # build artefacts
 public
 .vscode
+netlify/functions/serverless/**
+!netlify/functions/serverless/index.js
 
 # secrets and errors
 .env

@@ -1,0 +1,17 @@
+---
+title: "Search"
+layout: base
+permalink:
+  serverless: /search/
+---
+
+{% set searchTerm = eleventy.serverless.query.search %}
+
+<h2>Search for: {{ searchTerm }}</h2>
+<p>{{ posts | results(searchTerm) | length }} results</p>
+
+<ul class="posts">
+{% for key, post in posts | results(searchTerm) %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

@@ -19,7 +19,7 @@
   "author": "5t3ph",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0-canary.41",
     "autoprefixer": "^10.3.3",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
