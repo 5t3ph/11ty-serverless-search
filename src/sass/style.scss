@@ -1,20 +1,54 @@
 :root {
-  --color: hsl(260, 80%, 45%);
+  --color-hue: 260;
+  --color: hsl(var(--color-hue), 80%, 45%);
+
   accent-color: var(--color);
 }
 
+* {
+  --outline-offset: 2px;
+
+  box-sizing: border-box;
+  margin: 0;
+
+  &:focus {
+    outline: 2px dashed currentColor;
+    outline-offset: var(--outline-offset);
+  }
+}
+
 body {
-  font-family: sans-serif;
+  font-family: system-ui, sans-serif;
   background-color: #f9f9f9;
   width: min(60ch, 100vw - 2rem);
   margin-right: auto;
   margin-left: auto;
   line-height: 1.5;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: hsl(var(--color-hue), 20%, 15%);
 }
 
 form,
 h2 {
-  margin-top: max(8vh, 4rem);
+  margin-top: max(5vh, 2rem);
+}
+
+h2 {
+  color: hsl(var(--color-hue), 20%, 45%);
+
+  + p {
+    font-size: 1.25rem;
+  }
+}
+
+ul,
+p + p {
+  margin-top: 1rem;
+}
+
+a {
+  text-underline-offset: 0.15em;
 }
 
 form {
@@ -28,19 +62,11 @@ label {
   font-size: 1.25rem;
 }
 
-* {
-  --outline-offset: 2px;
-
-  &:focus {
-    outline: 2px dashed currentColor;
-    outline-offset: var(--outline-offset);
-  }
-}
-
 input {
   font-size: 1.15rem;
   border: 2px solid;
   border-radius: 4px;
+  padding: 0.5em;
 }
 
 button {

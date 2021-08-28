@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("results", (posts, term) => {
-    var results = Object.entries(posts).filter(([_key, { title, url, content }]) => {
+    var results = posts.filter(({ title, url, content }) => {
       const regex = RegExp(term, "i");
       if (title && regex.test(title)) return true;
       if (url && regex.test(url)) return true;

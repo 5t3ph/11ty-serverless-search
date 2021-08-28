@@ -8,17 +8,16 @@ eleventyComputed:
 
 {% set searchTerm = eleventy.serverless.query.search %}
 
-
-
 {% include "searchform.njk" %}
 
 {% if searchTerm %}
 <h2>Search for: {{ searchTerm }}</h2>
-<p>{{ posts | results(searchTerm) | length }} results</p>
+<p><strong>{{ posts | results(searchTerm) | length }}</strong> results</p>
 
 <ul class="posts">
-{% for key, post in posts | results(searchTerm) %}
+{% for post in posts | results(searchTerm) %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+
 {% endif %}
