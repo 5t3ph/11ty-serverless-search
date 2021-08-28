@@ -7,17 +7,16 @@ module.exports = async () => {
     headers: { "api-key": process.env.DEVTO },
   });
 
-  let response = [];
+  let response = new Set();
   // Grab the items and re-format to the fields we want
   if (data.length) {
-    var post = data.map((item) => {
-      return {
+    data.map((item) => {
+      response.add({
         title: item.title,
         url: item.url,
         content: item.body_markdown,
-      };
+      });
     });
-    response.push(...post);
   }
-  return response;
+  return [...response];
 };

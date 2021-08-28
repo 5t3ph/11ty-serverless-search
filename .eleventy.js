@@ -8,6 +8,12 @@ module.exports = function (eleventyConfig) {
     functionsDir: "./netlify/functions/",
   });
 
+  eleventyConfig.addCollection("allPosts", (collections) => {
+    var externalPosts = collections.getAll()[0].data.posts;
+    var localPosts = collections.getAll()[0].data.localposts;
+    return [...localPosts, ...externalPosts];
+  });
+
   eleventyConfig.addFilter("results", (posts, term) => {
     var results = posts.filter(({ title, url, content }) => {
       const regex = RegExp(term, "i");
