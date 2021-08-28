@@ -9,8 +9,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("allPosts", (collections) => {
-    var externalPosts = collections.getAll()[0].data.posts;
     var localPosts = collections.getAll()[0].data.localposts;
+    var externalPosts = collections.getAll()[0].data.posts;
     return [...localPosts, ...externalPosts];
   });
 

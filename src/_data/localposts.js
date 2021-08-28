@@ -1,5 +1,5 @@
 /*
-Collections are not currently available in 11ty Serverless, so this is our "hack" around that, because we can still create a "collection" if we are doing it from data
+Work in progress... not entirely working outside of local dev...
 */
 
 const fastglob = require("fast-glob");
