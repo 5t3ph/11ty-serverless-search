@@ -3,18 +3,20 @@ layout: base.njk
 title: 11ty Serverless Search
 ---
 
-<p>An example of using <a href="https://www.11ty.dev/docs/plugins/serverless/">11ty Serverless</a> to create site search. External results from <a href="https://dev.to/5t3ph">Stephanie Eckles dev.to profile</a> are fetched as data, and then passed through an 11ty filter to search the content and return search results.</p>
+<p>An example of using <a href="https://www.11ty.dev/docs/plugins/serverless/">11ty Serverless</a> to create site search using local and External.</p> 
+
+<p>External results are fetched from <a href="https://dev.to/5t3ph">Stephanie Eckles dev.to profile</a>. 11ty serverless doesn't currently support typical collections, but it does support collections created from local data under specific conditions. So, we run a prebuild/prestart Node script to generate local data containing an array of the local post data.<p>
+
+<p>When a search is requested, 11ty Serverless serves the page by passing the combined custom collection holding the external and local data through an 11ty filter to search the content and return search results.</p>
 
 <p><a href="https://github.com/5t3ph/11ty-serverless-search">Use this template</a></p>
-
-<p><em>TODO: Add example of using local page data</em></p>
 
 {% include "searchform.njk" %}
 
 <h2>All Posts</h2>
 
 <ul class="posts">
-{% for post in posts %}
+{% for post in collections.allPosts %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>

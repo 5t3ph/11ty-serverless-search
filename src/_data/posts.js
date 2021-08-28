@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const apiRoot = "https://dev.to/api/articles/me/published?per_page=100";
+const apiRoot = "https://dev.to/api/articles/me/published?per_page=50";
 
 module.exports = async () => {
   const { data } = await axios.get(apiRoot, {

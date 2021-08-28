@@ -1,10 +1,10 @@
 # 11ty Serverless Search
 
-An example of using [11ty Serverless](https://www.11ty.dev/docs/plugins/serverless/) to create site search. External results from [Stephanie Eckles dev.to profile](https://dev.to/5t3ph) are fetched as data, and then passed through an 11ty filter to search the content and return search results.
+An example of using [11ty Serverless](https://www.11ty.dev/docs/plugins/serverless/) to create site search using local and External.
 
-**To use, select "Use this template"**
+External results are fetched from [Stephanie Eckles dev.to profile](https://dev.to/5t3ph). 11ty serverless doesn't currently support typical collections, but it does support collections created from local data under specific conditions. So, we run a prebuild/prestart Node script to generate local data containing an array of the local post data.
 
-> TODO: Add example of using local page data
+When a search is requested, 11ty Serverless serves the page by passing the combined custom collection holding the external and local data through an 11ty filter to search the content and return search results.
 
 ## Development Scripts
 
