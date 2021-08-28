@@ -1,5 +1,5 @@
 /*
-Work in progress... not entirely working outside of local dev...
+We have to precompile this data for 11ty Serverless to successfully access it as local data within our custom collection.
 */
 
 const fastglob = require("fast-glob");
