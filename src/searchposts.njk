@@ -10,6 +10,12 @@ eleventyComputed:
 
 {% include "searchform.njk" %}
 
+<ul class="posts">
+{% for post in collections.local %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
 {% if searchTerm %}
 <h2>Search for: {{ searchTerm }}</h2>
 <p><strong>{{ collections.allPosts | results(searchTerm) | length }}</strong> results</p>

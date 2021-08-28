@@ -8,6 +8,10 @@ module.exports = function (eleventyConfig) {
     functionsDir: "./netlify/functions/",
   });
 
+  eleventyConfig.addCollection("local", (collections) => {
+    return collections.getAll()[0].data.localposts;
+  });
+
   eleventyConfig.addCollection("allPosts", (collections) => {
     var localPosts = collections.getAll()[0].data.localposts;
     var externalPosts = collections.getAll()[0].data.posts;
