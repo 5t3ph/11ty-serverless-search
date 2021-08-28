@@ -10,7 +10,9 @@
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "build": "npm-run-all build:sass build:eleventy",
+    "prestart": "node localposts.js",
+    "prebuild": "node localposts.js"
   },
   "repository": {
     "type": "git",
