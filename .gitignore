@@ -6,6 +6,7 @@ public
 .vscode
 netlify/functions/serverless/**
 !netlify/functions/serverless/index.js
+_data/localposts.js
 
 # secrets and errors
 .env

@@ -11,8 +11,8 @@
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:eleventy",
-    "prestart": "node localposts.js",
-    "prebuild": "node localposts.js"
+    "prestart": "node localPostData.js",
+    "prebuild": "node localPostData.js"
   },
   "repository": {
     "type": "git",
